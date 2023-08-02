@@ -1,4 +1,4 @@
--- Active: 1690550077604@@127.0.0.1@3306
+-- Active: 1690847313306@@127.0.0.1@3306
 CREATE TABLE users (
     id TEXT PRIMARY KEY UNIQUE NOT NULL,
     name TEXT NOT NULL,
@@ -7,6 +7,11 @@ CREATE TABLE users (
     role TEXT NOT NULL,
     created_at TEXT DEFAULT (DATETIME()) NOT NULL
 );
+
+INSERT INTO users (id, name, email, password, role)
+VALUES ('u001', 'Vinicius', 'vinicius@email.com', '123456', 'adm');
+
+DROP TABLE users;
 
 CREATE TABLE posts (
     id TEXT PRIMARY KEY UNIQUE NOT NULL,
@@ -21,6 +26,8 @@ CREATE TABLE posts (
         ON DELETE CASCADE
 );
 
+DROP TABLE posts;
+
 CREATE TABLE likes_dislikes (
     user_id TEXT NOT NULL,
     post_id TEXT NOT NULL,
@@ -32,3 +39,5 @@ CREATE TABLE likes_dislikes (
         ON UPDATE CASCADE
         ON DELETE CASCADE
 );
+
+DROP TABLE likes_dislikes;
