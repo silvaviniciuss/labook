@@ -1,5 +1,7 @@
 import express, { Request, Response } from 'express'
 import cors from "cors"
+import { UserController } from './database/controller/UserController'
+import { userRouter } from './router/userRouter'
 
 const app = express()
 app.use(cors())
@@ -9,7 +11,7 @@ app.listen(3003, ()=> {
 
 app.get("/ping",async (req:Request, res: Response) => {
     try {
-        res.status(200).send({message: "Pong"})
+        res.status(200).send({message: "PingPoong"})
     } catch (error) {
         console.log(error)
         if(req.statusCode===200) {
@@ -22,3 +24,5 @@ app.get("/ping",async (req:Request, res: Response) => {
         }
     }
 })
+
+app.use("/users", userRouter)
