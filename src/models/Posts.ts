@@ -1,13 +1,59 @@
+export interface PostDB {
+    id: string,
+    creator_id: string,
+    content: string,
+    likes: number,
+    dislikes: number,
+    created_at: string,
+    updated_at: string
+}
+
+export interface GetPostsDB {
+    id: string,
+    creator_id: string,
+    content: string,
+    likes: number,
+    dislikes: number,
+    created_at: string,
+    updated_at: string,
+    creator_name: string
+}
+
+export interface PostsModel {
+    id: string,
+    content: string,
+    likes: number,
+    dislikes: number,
+    createdAt: string,
+    updateAt: string,
+    creator: {
+        id: string,
+        name: string
+    }
+}
+
+export interface LikeDislikeDB {
+    user_id: string,
+    post_id: string,
+    like: number
+}
+
+export enum POST_LIKE {
+    ALREADY_LIKED = 'ALREADY LIKED',
+    ALREADY_DISLIKED = 'ALREADY DISLIKED'
+}
+
 export class Posts {
     constructor(
         private id: string,
-        private creator: string,
         private content: string,
         private likes: number,
         private dislikes: number,
         private createdAt: string,
-        private updateAt: string
-    ){}
+        private updateAt: string,
+        private creatorId: string,
+        private creatorName: string
+    ) { }
 
     public getId(): string {
         return this.id
@@ -15,14 +61,6 @@ export class Posts {
 
     public setId(newValue: string): void {
         this.id = newValue
-    }
-
-    public getCreator(): string {
-        return this.creator
-    }
-
-    public setCreator(newValue: string): void {
-        this.creator = newValue
     }
 
     public getContent(): string {
@@ -41,12 +79,28 @@ export class Posts {
         this.likes = newValue
     }
 
+    public addLike (): void {
+        this.likes++
+    }
+
+    public removeLike (): void {
+        this.likes--
+    }
+
     public getDislikes(): number {
         return this.dislikes
     }
 
     public setDislikes(newValue: number): void {
         this.dislikes = newValue
+    }
+
+    public addDislike(): void {
+        this.dislikes++
+    }
+
+    public removeDislike(): void {
+        this.dislikes--
     }
 
     public getCreatedAt(): string {
@@ -64,4 +118,52 @@ export class Posts {
     public setUpdatedAt(newValue: string): void {
         this.updateAt = newValue
     }
+
+    
+    public getCreatorId(): string {
+        return this.creatorId
+    }
+
+    public setCreatorId(newValue: string): void {
+        this.creatorId = newValue
+    }
+
+    
+    public getCreatorName(): string {
+        return this.creatorName
+    }
+
+    public setCreatorName(newValue: string): void {
+        this.creatorName = newValue
+    }
+
+    public toDBModel(): PostDB {
+        return {
+            id: this.id,
+            creator_id: this.creatorId,
+            content: this.content,
+            likes: this.likes,
+            dislikes: this.dislikes,
+            created_at: this.createdAt,
+            updated_at: this.updateAt
+        }
+    }
+
+    public toPostModel(): PostsModel {
+        return {
+            id: this.id,
+            content: this.content,
+            likes: this.likes,
+            dislikes: this.dislikes,
+            createdAt: this.createdAt,
+            updateAt: this.updateAt,
+            creator: {
+                id: this.creatorId,
+                name: this.creatorName
+            }
+        }
+    }
+
+    
+
 }
