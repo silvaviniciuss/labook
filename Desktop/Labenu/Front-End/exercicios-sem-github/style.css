@@ -1,0 +1,48 @@
+div {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 600px;
+    height: 400px;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; */
+    grid-template:1fr 1fr / 1fr 1fr;
+    justify-items: end;
+
+
+}
+
+.verde {
+    background-color: green;
+    
+    
+}
+.azul {
+    background-color: blue;
+    
+    
+}
+.vermelho {
+    background-color: red;
+    
+    
+}
+
+ul {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 140px;
+    height: 140px;
+    padding: 20px;
+      
+}
+
+li {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 50%;
+    padding: 5px;
+    margin: 10px;
+    background-color: white;
+    
+}

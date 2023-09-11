@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 900px;
+    height: 1000px;
+}
+
+.ladoA{
+    /* border: 1px solid black; */
+    width: 250px;
+    
+}
+
+.ladoAItens {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.logo {
+    height: 100px;
+    /* border: 1px solid black; */
+}
+
+.logo img {
+    width: 200px;
+    height: 50px;
+    padding: 20px;
+}
+
+.dados {
+    height: 100px;
+    border: 1px solid rgb(152, 145, 145);
+    padding: 5px;
+}
+
+.dados p {
+    
+    text-align: justify;
+    padding: 5px;
+    margin: 3px;
+}
+
+.navegacao {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+
+}
+
+.navegacao {
+    margin-top: 50px;
+}
+
+.navegacao a {
+    text-decoration: none;
+    width: 80%;
+    padding: 5px;
+    border-end-end-radius: 10px;
+    background-color: #E2E8F0;
+    color: #46535b;
+    font: optional;
+    text-align: center;
+}
+
+.presenca {
+    height:400px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 15px;
+}
+
+.presenca p{
+    width: 80%;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid green;
+    
+}
+
+
+.ladoB{
+    /* border: 1px solid black; */
+    width: 650px;
+    background-color: #E2E8F0;
+    
+
+}
+
+.introducao {
+    height: 30%;
+    background-color: rgba(255, 166, 0, 0.923);
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;    
+    border-radius: 10px;
+    
+}
+
+.introducao p {
+    color: white;
+    padding: 20px;
+}
+
+.introducao img {
+    width: 50%;
+    height: 50%;
+}
+
+.calendario {
+    /* border: 1px solid black; */
+    width: 94%;
+    height: 55%;
+    background-color: white ;
+    margin: 20px;
+    border-radius: 10px;
+
+}
+
+.horario {
+    padding: 25px;
+}
+
+.cabecalho {
+    display: grid;
+    grid-template:1fr/ 1fr;
+    justify-items: center;
+    padding: 20px;
+}
+
+.tabela {
+    display: flex;
+
+}
+
+.data {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.numeros {
+    display: flex;
+    flex-direction: row;
+}
+
+

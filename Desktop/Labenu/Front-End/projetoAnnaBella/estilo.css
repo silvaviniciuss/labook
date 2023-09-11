@@ -1,0 +1,53 @@
+body {
+	background: #d2d2d2c1 url('imagens/fundo.png');
+	font: 16px Arial, helvetica, sans-serif;
+}
+
+#principal {
+	/* width: 900px; */
+}
+
+nav {
+	/* width: 900px; */
+	/* border: 1px solid black; */
+	background-color: #c5c5b2;
+	padding: 20px;
+	
+}
+nav a {
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 10px;
+
+}
+
+main {
+	background-color: #efefe2;
+	padding: 15px;
+	display: flex;
+}
+
+section {
+	margin: 5px;
+	text-align: justify;
+	width: 50%;
+}
+
+article {
+	border: 2px solid orange;
+	width: 100%;
+	height: 50%;
+}
+
+section img {
+	width: 100%;
+}
+
+footer {
+	background-color: #8d8d76;
+	padding: 5px;
+	right: 5px;
+	left: 5px;
+	text-align: center;
+}

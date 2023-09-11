@@ -1,0 +1,33 @@
+div {
+    background-color: #afafaf;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 600px;
+    height: 400px;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.azul {
+    background-color: #228efb;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.verde {
+    background-color: #0ccd0c;
+    border-radius: 10px;
+    border: 1px solid black;
+    justify-self: end;
+
+}
+
+li {
+    background-color: #c7c7c7;
+    border-radius: 10px;
+    margin: 8px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+}
